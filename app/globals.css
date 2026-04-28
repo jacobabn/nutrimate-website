@@ -113,10 +113,5 @@
   details.faq[open] summary .chev { transform: rotate(180deg); background: theme('colors.primary-tint'); border-color: transparent; color: theme('colors.primary-dark'); }
   details.faq .ans { @apply mt-3 body text-muted; }
 
-  .brand-mark {
-    background: linear-gradient(180deg, #8DD9D5 0%, #A2DCD3 14%, #C0DCC8 28%, #D9D2BA 42%, #EDC2AC 56%, #F8AC9C 70%, #FE9A8E 84%, #FF8C82 100%);
-    border-radius: 22%;
-  }
-
   .nav-blur { background: rgba(251,250,247,.78); backdrop-filter: saturate(140%) blur(12px); -webkit-backdrop-filter: saturate(140%) blur(12px); border-bottom: 1px solid rgba(231,227,217,.6); }
 }
