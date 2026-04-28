@@ -70,10 +70,10 @@ export function PhoneMock() {
                   <div className="meta mt-1">of 1,940 kcal</div>
                 </div>
               </div>
-              <div className="flex flex-col gap-2">
-                <div className="pill-tint">P 92 / 130 g</div>
-                <div className="pill">C 158 / 220 g</div>
-                <div className="pill">F 41 / 65 g</div>
+              <div className="flex-1 min-w-0 flex flex-col gap-3">
+                <MacroBar label="Protein" cur={92}  goal={130} color="#F06292" />
+                <MacroBar label="Carbs"   cur={158} goal={220} color="#F8AC9C" />
+                <MacroBar label="Fat"     cur={41}  goal={65}  color="#8DD9D5" />
               </div>
             </div>
 
@@ -116,6 +116,24 @@ export function PhoneMock() {
         <span className="text-[14px]">📷</span>
         <span className="text-[12px] font-semibold">Photo logged</span>
       </motion.div>
+    </div>
+  );
+}
+
+function MacroBar({ label, cur, goal, color }: { label: string; cur: number; goal: number; color: string }) {
+  const pct = Math.max(0, Math.min(100, Math.round((cur / goal) * 100)));
+  return (
+    <div>
+      <div className="flex items-baseline justify-between gap-2">
+        <span className="text-[11px] font-bold uppercase tracking-[0.12em] text-ink2">{label}</span>
+        <span className="mono text-[11px] text-muted tabular-nums">
+          <span className="text-ink font-semibold">{cur}</span>
+          <span className="text-subtle"> / {goal} g</span>
+        </span>
+      </div>
+      <div className="mt-1.5 h-1.5 rounded-full bg-line2/40 overflow-hidden">
+        <div className="h-full rounded-full" style={{ width: `${pct}%`, background: color }} />
+      </div>
     </div>
   );
 }
