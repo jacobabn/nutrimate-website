@@ -1,5 +1,6 @@
 import { Reveal } from "./Reveal";
 import { PhoneMock } from "./PhoneMock";
+import { APP_LINK_PROPS } from "@/lib/links";
 
 export function Hero() {
   return (
@@ -19,7 +20,7 @@ export function Hero() {
           </Reveal>
           <Reveal delay={0.15}>
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a href="#download" className="btn-pink">Start 7 days free</a>
+              <a {...APP_LINK_PROPS} className="btn-pink">Start 7 days free</a>
               <a href="#how" className="btn-ghost">See how it works</a>
             </div>
           </Reveal>

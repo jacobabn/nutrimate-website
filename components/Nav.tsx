@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { BrandMark } from "./BrandMark";
+import { APP_LINK_PROPS } from "@/lib/links";
 
 const items = [
   { href: "#how",     label: "How it works" },
@@ -36,7 +37,7 @@ export function Nav() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <a href="#download" className="btn-pink h-10 px-4 text-[14px] hidden sm:inline-flex">
+          <a {...APP_LINK_PROPS} className="btn-pink h-10 px-4 text-[14px] hidden sm:inline-flex">
             <AppleGlyph />
             Download
           </a>
@@ -64,7 +65,7 @@ export function Nav() {
                 {i.label}
               </a>
             ))}
-            <a href="#download" onClick={() => setOpen(false)} className="btn-pink w-full">Download</a>
+            <a {...APP_LINK_PROPS} onClick={() => setOpen(false)} className="btn-pink w-full">Download</a>
           </div>
         </div>
       )}

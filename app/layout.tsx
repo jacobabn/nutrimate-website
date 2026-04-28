@@ -47,6 +47,8 @@ export const metadata: Metadata = {
     apple: [{ url: "/icon.svg" }],
   },
   robots: { index: true, follow: true },
+  appleWebApp: { title: "NutriMate", statusBarStyle: "default", capable: false },
+  itunes: { appId: "6741915797" },
 };
 
 export const viewport: Viewport = {

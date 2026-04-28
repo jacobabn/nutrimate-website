@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Reveal } from "./Reveal";
+import { APP_LINK_PROPS } from "@/lib/links";
 
 const ANNUAL_FEATURES = [
   "Full AI coach, chat and pushes",
@@ -43,7 +44,7 @@ export function Pricing() {
                   </li>
                 ))}
               </ul>
-              <a href="#download" className="btn-pink w-full mt-7">Start 7 days free</a>
+              <a {...APP_LINK_PROPS} className="btn-pink w-full mt-7">Start 7 days free</a>
             </article>
           </Reveal>
 
@@ -63,7 +64,7 @@ export function Pricing() {
                   </li>
                 ))}
               </ul>
-              <a href="#download" className="btn-ghost w-full mt-7">Try monthly</a>
+              <a {...APP_LINK_PROPS} className="btn-ghost w-full mt-7">Try monthly</a>
             </article>
           </Reveal>
         </div>

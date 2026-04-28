@@ -23,6 +23,8 @@ export const homeJsonLd = {
       name: "NutriMate AI",
       applicationCategory: "HealthApplication",
       operatingSystem: "iOS 16+",
+      installUrl: "https://apps.apple.com/app/id6741915797",
+      downloadUrl: "https://apps.apple.com/app/id6741915797",
       offers: [
         { "@type": "Offer", name: "Annual",  price: "79.99", priceCurrency: "EUR", category: "subscription" },
         { "@type": "Offer", name: "Monthly", price: "7.99",  priceCurrency: "EUR", category: "subscription" },
