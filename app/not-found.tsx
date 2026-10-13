@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { BrandMark } from "@/components/BrandMark";
+import { Footer } from "@/components/Footer";
 
 export default function NotFound() {
   return (
+    <>
     <main className="min-h-[100dvh] grid place-items-center px-6">
       <div className="text-center max-w-[440px]">
         <BrandMark size={56} className="mx-auto" />
@@ -11,5 +13,7 @@ export default function NotFound() {
         <Link href="/" className="btn-pink mt-8 inline-flex">Back to NutriMate</Link>
       </div>
     </main>
+    <Footer />
+    </>
   );
 }

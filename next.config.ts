@@ -25,6 +25,11 @@ const config: NextConfig = {
           { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
         ],
       },
+      {
+        // Footer app icons from abn-app-network: file names carry a content hash.
+        source: "/abn-apps/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
+      },
     ];
   },
 };

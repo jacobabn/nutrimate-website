@@ -5,17 +5,17 @@ export const homeJsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://abn.company/#org",
-      name: "ABN",
-      url: "https://abn.company/",
-      logo: `${SITE_URL}/icon.svg`,
+      "@id": "https://www.abn.company/#organisatie",
+      name: "A Brand New Company",
+      url: "https://www.abn.company/",
+      logo: "https://www.abn.company/assets/abn-logo-tile-512.webp",
     },
     {
       "@type": "WebSite",
       "@id": `${SITE_URL}/#site`,
       url: `${SITE_URL}/`,
       name: "NutriMate",
-      publisher: { "@id": "https://abn.company/#org" },
+      publisher: { "@id": "https://www.abn.company/#organisatie" },
     },
     {
       "@type": "MobileApplication",
@@ -29,7 +29,7 @@ export const homeJsonLd = {
         { "@type": "Offer", name: "Annual",  price: "79.99", priceCurrency: "EUR", category: "subscription" },
         { "@type": "Offer", name: "Monthly", price: "7.99",  priceCurrency: "EUR", category: "subscription" },
       ],
-      publisher: { "@id": "https://abn.company/#org" },
+      publisher: { "@id": "https://www.abn.company/#organisatie" },
       url: `${SITE_URL}/`,
     },
     {
